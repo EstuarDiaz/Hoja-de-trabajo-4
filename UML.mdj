@@ -557,7 +557,7 @@
 											"top": 52,
 											"width": 143,
 											"height": 13,
-											"text": "iPila"
+											"text": "Stack"
 										},
 										{
 											"_type": "LabelView",
@@ -6585,7 +6585,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "iPila",
+					"name": "Stack",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
