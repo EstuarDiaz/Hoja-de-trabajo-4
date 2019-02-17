@@ -1,3 +1,8 @@
+/*
+    Codigo extraido y adaptado de Java Structures, (Bailey, 2007)
+
+*/
+
 public class SimpleList<E> extends aLista<E> {
     protected int count;
     protected Node<E> head;

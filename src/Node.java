@@ -1,3 +1,7 @@
+/*
+    Codigo extraido y adaptado de Java Structures, (Bailey, 2007)
+
+*/
 public class Node<E>
 {
     protected E data; // value stored in this element

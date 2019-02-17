@@ -1,3 +1,8 @@
+/*
+    Codigo extraido y adaptado de Java Structures, (Bailey, 2007)
+
+*/
+
 public class DoubleList<E> extends aLista<E> {
     protected int count;
     protected DoublyLinkedNode<E> head;

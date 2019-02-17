@@ -1,3 +1,8 @@
+/*
+    Codigo extraido y adaptado de Java Structures, (Bailey, 2007)
+
+*/
+
 public class DoublyLinkedNode<E> {
     protected E data;
     protected DoublyLinkedNode<E> nextElement;

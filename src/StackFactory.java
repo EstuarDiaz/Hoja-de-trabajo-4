@@ -8,12 +8,12 @@ class StackFactory<E> {
 	else if (entry.equals("VECTOR"))
       return new StackVector<E>(); //regresa Vector
 	else if (entry.equals("SIMPLE"))
-	      return new SimpleList<E>(); //regresa Vector
+	      return new SimpleList<E>(); //regresa Lista simple
 	else if (entry.equals("DOUBLE"))
-	      return new DoubleList<E>(); //regresa Vector
+	      return new DoubleList<E>(); //regresa Lista	doble
 	else if (entry.equals("CIRCULAR"))
-	      return new CyclicList<E>(); //regresa Vector
+	      return new CyclicList<E>(); //regresa Lista ciclica
 	else 
-		return new StackArrayList<E>();
+		return new StackArrayList<E>(); //default regresa ArrayList
    }
 }

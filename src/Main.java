@@ -5,9 +5,32 @@ import java.io.IOException;
 import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException {
-		iPila<String> stack = new Pila<String>();
-		iCalculadora calc = Singleton.getCalculadora();
+
+
+		StackFactory<String> factory = new StackFactory<>();
+
 		Scanner input = new Scanner(System.in);
+		//Se elije que tipo de implementacion es generado por la fabrica
+		System.out.println("Bienvenido al programa.\n¿Que tipo de implementacion desea generar?\n\t1.ARRAY\n\t2.VECTOR\n\t3.SIMPLE (Lista con nodos simplemente enlazados)\n\t4.DOBLE (Lista con nodos doblemente enlazados)\n\t5.CIRCULAR (Lista circularmente enlazada)");
+		System.out.println("Escriba el numero o la palabra en mayusculas: ");
+		String respuesta = input.nextLine();
+		String implementation;
+		if(respuesta.equals("1")||respuesta.equals("ARRAY")){
+			implementation = "ARRAY";
+		}else if(respuesta.equals("2")||respuesta.equals("VECTOR")){
+			implementation = "VECTOR";
+		}else if (respuesta.equals("3")||respuesta.equals("SIMPLE")){
+			implementation = "SIMPLE";
+		}else if (respuesta.equals("4")||respuesta.equals("DOBLE")){
+			implementation = "DOBLE";
+		}else if (respuesta.equals("5")||respuesta.equals("CIRCULAR")){
+			implementation = "CIRCULAR";
+		}else{
+			System.out.println("La opcion que ingreso no es valida. Se usara la implementacion con arraylist por default.");
+			implementation = "ARRAY";
+		}
+		iPila<String> stack = factory.getPila(implementation);
+		iCalculadora calc = Singleton.getCalculadora();
 		// Obtener el texto postfix
 		System.out.println("Por favor ingrese el texto");
 		//obtiene el arcivo contenedor del Postix

@@ -1,3 +1,8 @@
+/*
+    Codigo extraido y adaptado de Java Structures, (Bailey, 2007)
+
+*/
+
 public class CyclicList<E> extends aLista<E> {
 
     protected Node<E> tail;
