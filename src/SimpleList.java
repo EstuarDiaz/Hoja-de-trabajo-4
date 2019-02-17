@@ -6,7 +6,7 @@ public class SimpleList<E> extends aLista<E> {
     public int size() {
         return this.count;
     }
-
+    
     @Override
     public E getFirst()
     // pre: list is not empty

@@ -1,7 +1,6 @@
-import java.util.Iterator;
-
 public abstract class aLista<E> implements iLista<E> {
-    @Override
+    
+	@Override
     public void push(E item) {
         this.addFirst(item);
     }
