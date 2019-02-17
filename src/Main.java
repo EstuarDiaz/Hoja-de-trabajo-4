@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		iPila<String> stack = new Pila<String>();
-		iCalculadora calc = new Calculadora();
+		iCalculadora calc = Singleton.getCalculadora();
 		Scanner input = new Scanner(System.in);
 		// Obtener el texto postfix
 		System.out.println("Por favor ingrese el texto");
