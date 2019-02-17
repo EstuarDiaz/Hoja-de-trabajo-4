@@ -9,7 +9,7 @@ public class CyclicList<E> extends aLista<E> {
 
     @Override
     public E getFirst() {
-        return null;
+        return tail.value();
     }
 
     @Override
@@ -30,8 +30,23 @@ public class CyclicList<E> extends aLista<E> {
 
     @Override
     public E removeFirst() {
-        return null;
+    	if(tail.next() == tail) {
+    		E value = tail.value();
+    		tail = null;
+    		count--;
+    		return value;
+    	}
+    	else {
+    		E value = tail.value();
+    		// gets second
+    		Node<E> segundo = tail;
+    		for(int i = 0; i < count-1; i++) {
+    			segundo = segundo.next();
+    		}
+    		segundo.setNext(tail.next());
+    		tail = segundo;
+    		count--;
+    		return value;
+    	}
     }
-
-
 }
